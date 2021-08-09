@@ -1,5 +1,6 @@
 // let books = document.getElementsByClassName("books");
-let collection = [];
+let collection = JSON.parse(window.localStorage.getItem('collection')) || [] 
+// let collection = [];
 
 // let submit = document.getElementById("submit")
 // let aTitle = document.getElementById("title")
@@ -15,10 +16,10 @@ let collection = [];
 //     collection.push({title: title, author: author});
 // }
 let books = document.getElementsByClassName("books");
-
 for (book in collection) {
+    let thisBook = JSON.parse(book)
     let newBook = document.createElement('div');
-    newBook.innerHTML = '<hr><h3>'+ book.title + '</h3><h3>'+ book.author + '</h3><button>Remove</button>';
+    newBook.innerHTML = '<hr><h3>'+ thisBook["title"]  + '</h3><h3>'+ thisBook["author"]  + '</h3><button>Remove</button>';
     books[0].appendChild(newBook);
 }
   
@@ -32,7 +33,7 @@ form.addEventListener('submit', (event) => {
         'author' : document.getElementById('author').value
     };
     collection.push(book);
-    window.localStorage.setItem('collection', collection);
+    window.localStorage.setItem('collection', JSON.stringify(collection));
     displayBook(book);
     console.log(collection);
 
