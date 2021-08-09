@@ -1,12 +1,11 @@
+"use strict";
+
 // let books = document.getElementsByClassName("books");
 // let collection = []
-
 // let submit = document.getElementById("submit")
 // let aTitle = document.getElementById("title")
 // let anAuthor = document.getElementById("author")
-
 // submit.addEventListener('click', addBook(aTitle, anAuthor))
-
 // function addBook(title, author){
 //     console.log("creating" + title)
 //     let newBook = document.createElement('div');
@@ -14,11 +13,10 @@
 //     books[0].appendChild(newBook)
 //     collection.push({title: title, author: author});
 // }
-
-let newBook = [];
+var newBook = [];
 
 function addBook() {
-  const book = {};
+  var book = {};
   book.title = document.getElementById('title').value;
   book.author = document.getElementById('author').value;
   displayBook();
@@ -27,7 +25,6 @@ function addBook() {
 }
 
 function displayBook() {
-    var list = document.getElementById('list');
-    list.innerHTML = '';
-    
+  var list = document.getElementById('list');
+  list.innerHTML = '';
 }
