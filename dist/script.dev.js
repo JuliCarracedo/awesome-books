@@ -36,13 +36,7 @@ form.addEventListener('submit', function (event) {
   window.localStorage.setItem('collection', JSON.stringify(collection));
   displayBook(book);
 }); // commanded by the Listener, adds a div with a book's data and a remove button
-
-function displayBook(book) {
-  var newBook = document.createElement('div');
-  newBook.innerHTML = "<hr><h3>".concat(book.title, "</h3><h3>").concat(book.author, "</h3><button>Remove</button>");
-  books[0].appendChild(newBook);
-} // called by clicking any remove button. Deletes said element
-
+// called by clicking any remove button. Deletes said element
 
 function removeElement(i) {
   collection.splice(i, 1);

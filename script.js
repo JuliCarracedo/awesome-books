@@ -7,6 +7,11 @@ class Collection {
   constructor() {
     this.collection = JSON.parse(localStorage.getItem('collection')) || [];
   }
+  var displayBook = (book) => {
+    const newBook = document.createElement('div');
+    newBook.innerHTML = `<hr><h3>${book.title}</h3><h3>${book.author}</h3><button>Remove</button>`;
+    books[0].appendChild(newBook);
+  }
 }
 
 const books = document.getElementsByClassName('books');
@@ -33,13 +38,6 @@ form.addEventListener('submit', (event) => {
   window.localStorage.setItem('collection', JSON.stringify(collection));
   displayBook(book);
 });
-
-// commanded by the Listener, adds a div with a book's data and a remove button
-function displayBook(book) {
-  const newBook = document.createElement('div');
-  newBook.innerHTML = `<hr><h3>${book.title}</h3><h3>${book.author}</h3><button>Remove</button>`;
-  books[0].appendChild(newBook);
-}
 
 // called by clicking any remove button. Deletes said element
 function removeElement(i) {
