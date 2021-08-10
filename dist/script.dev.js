@@ -1,5 +1,7 @@
 "use strict";
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 /* eslint-disable no-unused-vars */
 
 /* eslint-disable no-use-before-define */
@@ -7,7 +9,12 @@
 /* eslint-disable no-plusplus */
 
 /* eslint-disable no-undef */
-var collection = JSON.parse(localStorage.getItem('collection')) || [];
+var Collection = function Collection() {
+  _classCallCheck(this, Collection);
+
+  this.collection = JSON.parse(localStorage.getItem('collection')) || [];
+};
+
 var books = document.getElementsByClassName('books');
 
 for (i = 0; i < collection.length; i++) {

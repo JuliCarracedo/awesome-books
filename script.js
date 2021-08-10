@@ -2,7 +2,12 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-undef */
-const collection = JSON.parse(localStorage.getItem('collection')) || [];
+
+class Collection {
+  constructor() {
+    this.collection = JSON.parse(localStorage.getItem('collection')) || [];
+  }
+}
 
 const books = document.getElementsByClassName('books');
 
