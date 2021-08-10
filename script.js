@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-plusplus */
@@ -7,7 +8,6 @@ class Collection {
   constructor() {
     this.collection = JSON.parse(localStorage.getItem('collection')) || [];
   }
-
 
   displayBook(book) {
     const newBook = document.createElement('div');
@@ -20,7 +20,6 @@ class Collection {
     window.localStorage.setItem('collection', JSON.stringify(c.collection));
     window.location.reload();
   }
-
 }
 
 c = new Collection();
@@ -29,7 +28,7 @@ const books = document.getElementsByClassName('books');
 
 for (i = 0; i < c.collection.length; i++) {
   thisBook = c.collection[i];
-  c.displayBook(thisBook)
+  c.displayBook(thisBook);
 }
 
 const form = document.forms[0];
@@ -46,6 +45,3 @@ form.addEventListener('submit', (event) => {
   window.localStorage.setItem('collection', JSON.stringify(c.collection));
   c.displayBook(book);
 });
-
-// called by clicking any remove button. Deletes said element
-
