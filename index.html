@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
-<body>
-    <h1>Awesome books</h1>
-    <div class="books">
+<body class="container-fluid w-100 d-flex flex-column align-items-center">
+    <h1 class="ff-caveat">All awesome books</h1>
+    <div class="books ff-caveat w-75 container-fluid d-flex flex-column">
 
     </div>
     <hr>
-    <form id="new-book">
-        <input type="text" minlength="1" maxlength="30" placeholder="Title" id="title">
+    <h2 class="ff-caveat">Add awesome book</h2>
+    <form id="new-book container w-50 d-flex flex-column align-items-center">
+        <input class="ff-caveat fs-5" type="text" minlength="1" maxlength="30" placeholder="Title" id="title">
         <br>
         <br>
-        <input type="text" minlength="1" maxlength="30" placeholder="Author" id="author">
+        <input class="ff-caveat fs-5" type="text" minlength="1" maxlength="30" placeholder="Author" id="author">
         <br>
         <br>
-        <input type="submit" id="submit" value="Submit">
+        <input class="ff-caveat mx-5 fs-5" type="submit" id="submit" value="Submit">
     </form>
     <script src="./script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>

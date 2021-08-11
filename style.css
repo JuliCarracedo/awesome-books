@@ -1,3 +1,18 @@
-body {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+.ff-caveat {
+  font-family: 'Caveat', cursive;
+}
+
+.fixed-h{
+  height: 1.8em;
+  margin-top: 5px;
+}
+
+.fixed-w{
+  width: 50vw;
+}
+
+.bg-gray{
+  background-color: #bbb;
 }

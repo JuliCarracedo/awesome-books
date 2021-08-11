@@ -3,16 +3,23 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-undef */
+var colorNum = 0;
 
 class Collection {
   constructor() {
     this.collection = JSON.parse(localStorage.getItem('collection')) || [];
-  }
+  };
 
   displayBook(book) {
     const newBook = document.createElement('div');
-    newBook.innerHTML = `<hr><h3>${book.title}</h3><h3>${book.author}</h3><button id="${i}" onclick="c.removeElement(${i})" >Remove</button>`;
+    newBook.innerHTML = `<p>"${book.title}" by ${book.author}</p>
+    <button class="fixed-h" id="${i}" onclick="c.removeElement(${i})" >Remove</button>`;
+    newBook.classList.add("d-flex", "justify-content-between", "container", "fixed-w");
+    if(colorNum%2 == 0){
+      newBook.classList.add("bg-gray");
+    }
     books[0].appendChild(newBook);
+    colorNum++;
   }
 
   removeElement(i) {
