@@ -4,16 +4,16 @@
   font-family: 'Caveat', cursive;
 }
 
-.fixed-h{
+.fixed-h {
   height: 1.8em;
   margin-top: 5px;
 }
 
-.fixed-w{
+.fixed-w {
   width: 50vw;
 }
 
-.bg-gray{
+.bg-gray {
   background-color: #bbb;
 }
 
@@ -37,4 +37,3 @@
 .inputs {
   margin-bottom: 10px;
 }
- 
