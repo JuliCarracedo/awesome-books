@@ -16,3 +16,19 @@
 .bg-gray{
   background-color: #bbb;
 }
+
+.division {
+  border: 2px solid rgb(26, 24, 24);
+  width: 10%;
+  margin: 5vh auto;
+}
+
+.form {
+  text-align: center;
+  margin: 10px 20% 0 20%;
+}
+
+.inputs {
+  margin-bottom: 10px;
+}
+ 

@@ -15,6 +15,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /* eslint-disable no-plusplus */
 
 /* eslint-disable no-undef */
+var colorNum = 0;
+
 var Collection =
 /*#__PURE__*/
 function () {
@@ -28,8 +30,15 @@ function () {
     key: "displayBook",
     value: function displayBook(book) {
       var newBook = document.createElement('div');
-      newBook.innerHTML = "<hr><h3>".concat(book.title, "</h3><h3>").concat(book.author, "</h3><button id=\"").concat(i, "\" onclick=\"c.removeElement(").concat(i, ")\" >Remove</button>");
+      newBook.innerHTML = "<p>\"".concat(book.title, "\" by ").concat(book.author, "</p>\n    <button class=\"fixed-h\" id=\"").concat(i, "\" onclick=\"c.removeElement(").concat(i, ")\" >Remove</button>");
+      newBook.classList.add('d-flex', 'justify-content-between', 'container', 'fixed-w');
+
+      if (colorNum % 2 === 0) {
+        newBook.classList.add('bg-gray');
+      }
+
       books[0].appendChild(newBook);
+      colorNum++;
     }
   }, {
     key: "removeElement",
