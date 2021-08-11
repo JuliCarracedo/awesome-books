@@ -17,6 +17,12 @@
   background-color: #bbb;
 }
 
+.books {
+  border: 2px solid rgb(94, 88, 88);
+  padding: 1vh 0;
+  min-width: 200px;
+}
+
 .division {
   border: 2px solid rgb(26, 24, 24);
   width: 10%;
