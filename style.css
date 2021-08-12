@@ -37,3 +37,11 @@
 .inputs {
   margin-bottom: 10px;
 }
+
+.nav-link {
+  color:black;
+}
+
+.nav-link:hover {
+  color:rgb(94, 88, 88);
+}
