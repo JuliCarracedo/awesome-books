@@ -5,32 +5,31 @@
 /* eslint-disable no-undef */
 let colorNum = 0;
 
-
 const books = document.getElementsByClassName('books');
-const list_div = document.getElementById('list-div');
-const add_div = document.getElementById('add-div');
-const contact_div = document.getElementById('contact-div');
+const listDiv = document.getElementById('list-div');
+const addDiv = document.getElementById('add-div');
+const contactDiv = document.getElementById('contact-div');
 const list = document.getElementById('list');
 const add = document.getElementById('add');
 const contact = document.getElementById('contact');
 
-add.addEventListener('click',(event) => {
-  add_div.classList.remove("d-none");
-  list_div.classList.add("d-none");
-  contact_div.classList.add("d-none");
-})
+add.addEventListener('click', (event) => {
+  addDiv.classList.remove('d-none');
+  listDiv.classList.add('d-none');
+  contactDiv.classList.add('d-none');
+});
 
-list.addEventListener('click',(event) => {
-  list_div.classList.remove("d-none");
-  add_div.classList.add("d-none");
-  contact_div.classList.add("d-none");
-})
+list.addEventListener('click', (event) => {
+  listDiv.classList.remove('d-none');
+  addDiv.classList.add('d-none');
+  contactDiv.classList.add('d-none');
+});
 
-contact.addEventListener('click',(event) => {
-  contact_div.classList.remove("d-none");
-  list_div.classList.add("d-none");
-  add_div.classList.add("d-none");
-})
+contact.addEventListener('click', (event) => {
+  contactDiv.classList.remove('d-none');
+  listDiv.classList.add('d-none');
+  addDiv.classList.add('d-none');
+});
 
 const form = document.forms[0];
 
@@ -51,16 +50,19 @@ class Collection {
 
     colorNum++;
   }
+
   removeElement(i) {
     c.collection.splice(i, 1);
     window.localStorage.setItem('collection', JSON.stringify(c.collection));
     window.location.reload();
   }
-  toList(){
-    
+
+  toList() {
+
   }
-  toAdd(){
-    
+
+  toAdd() {
+
   }
 }
 
@@ -82,6 +84,6 @@ form.addEventListener('submit', (event) => {
 
   window.localStorage.setItem('collection', JSON.stringify(c.collection));
   c.displayBook(book);
-  document.getElementById('title').value = ''
-  document.getElementById('author').value = ''
+  document.getElementById('title').value = '';
+  document.getElementById('author').value = '';
 });
