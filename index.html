@@ -4,23 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
-<body>
-    <h1>Awesome books</h1>
-    <div class="books">
-
+<body class="container-fluid w-100 d-flex flex-column align-items-center">
+  <nav class="navbar container-fluid d-flex justify-content-between">
+    <a class="link-unstyled" href="#"><img alt="logo" src="./Captura.PNG"></a>
+    <div class=" d-flex  justify-content-around">
+      <a class="nav-link" href="#" id="add">Add new</a>
+      <a class="nav-link" href="#" id="list">List</a>
+      <a class="nav-link" href="#" id="contact">Contact</a>
     </div>
-    <hr>
-    <form id="new-book">
-        <input type="text" minlength="1" maxlength="30" placeholder="Title" id="title">
-        <br>
-        <br>
-        <input type="text" minlength="1" maxlength="30" placeholder="Author" id="author">
-        <br>
-        <br>
-        <input type="submit" id="submit" value="Submit">
-    </form>
-    <script src="./script.js"> </script>
+  </nav>
+  <div class="container-fluid d-flex justify-content-end" id="dateTime"></div>
+  <section id="list-div" class=" container-fluid">
+    <h1 class="ff-caveat text-center">All awesome books</h1>
+    <div class="books ff-caveat w-75 container-fluid d-flex flex-column"></div>
+  </section>
+  <section id="add-div"  class=" container-fluid d-none">
+    <h1 class="ff-caveat text-center">Add awesome book</h1>
+    <div class="form">
+      <form class="new-book container w-50 d-flex flex-column align-items-center">
+        <div class="inputs">
+          <input class="ff-caveat fs-5" type="text" minlength="1" maxlength="30" placeholder="Title" id="title" required>
+        </div>
+        <div class="inputs">
+          <input class="ff-caveat fs-5" type="text" minlength="1" maxlength="30" placeholder="Author" id="author" required>
+        </div>
+        <div class="btn float-end">
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section id="contact-div" class="container-fluid d-none">
+    <h1 class="ff-caveat text-center">Contact information</h1>
+    <p class="text-center">Do you have any question or you want to say "Hello"?
+      <br>
+      You can reach out to us!
+      <br>Our e-mail: email@mail.com <br>Our phone: 0177 223 337 6<br>our address: streetname 2341, County
+    </p>
+
+  </section>
+  <footer class="navbar fixed-bottom d-flex justify-content-center">
+    <a> Corpyiright 2021. All rights reserved.</a>
+    <a class="nav-link" href="#"> Terms & Conditions</a>
+  </footer>
+  <script src="./luxon.js"></script>
+  <script src="./script.js"> </script>
 </body>
 </html>
