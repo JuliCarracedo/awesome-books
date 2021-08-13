@@ -3,6 +3,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-undef */
+
 let colorNum = 0;
 
 const books = document.getElementsByClassName('books');
@@ -12,6 +13,12 @@ const contactDiv = document.getElementById('contact-div');
 const list = document.getElementById('list');
 const add = document.getElementById('add');
 const contact = document.getElementById('contact');
+
+const datefield = document.getElementById('dateTime');
+const {DateTime} = luxon;
+const dt = DateTime.now();
+datefield.textContent = dt.toLocaleString(DateTime.DATETIME_MED);
+
 
 add.addEventListener('click', (event) => {
   addDiv.classList.remove('d-none');
@@ -34,6 +41,7 @@ contact.addEventListener('click', (event) => {
 const form = document.forms[0];
 
 class Collection {
+
   constructor() {
     this.collection = JSON.parse(localStorage.getItem('collection')) || [];
   }
