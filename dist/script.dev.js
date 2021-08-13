@@ -16,6 +16,34 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /* eslint-disable no-undef */
 var colorNum = 0;
+var books = document.getElementsByClassName('books');
+var listDiv = document.getElementById('list-div');
+var addDiv = document.getElementById('add-div');
+var contactDiv = document.getElementById('contact-div');
+var list = document.getElementById('list');
+var add = document.getElementById('add');
+var contact = document.getElementById('contact');
+var datefield = document.getElementById('dateTime');
+var _luxon = luxon,
+    DateTime = _luxon.DateTime;
+var dt = DateTime.now();
+datefield.textContent = dt.toLocaleString(DateTime.DATETIME_MED);
+add.addEventListener('click', function (event) {
+  addDiv.classList.remove('d-none');
+  listDiv.classList.add('d-none');
+  contactDiv.classList.add('d-none');
+});
+list.addEventListener('click', function (event) {
+  listDiv.classList.remove('d-none');
+  addDiv.classList.add('d-none');
+  contactDiv.classList.add('d-none');
+});
+contact.addEventListener('click', function (event) {
+  contactDiv.classList.remove('d-none');
+  listDiv.classList.add('d-none');
+  addDiv.classList.add('d-none');
+});
+var form = document.forms[0];
 
 var Collection =
 /*#__PURE__*/
@@ -47,20 +75,24 @@ function () {
       window.localStorage.setItem('collection', JSON.stringify(c.collection));
       window.location.reload();
     }
+  }, {
+    key: "toList",
+    value: function toList() {}
+  }, {
+    key: "toAdd",
+    value: function toAdd() {}
   }]);
 
   return Collection;
 }();
 
 c = new Collection();
-var books = document.getElementsByClassName('books');
 
 for (i = 0; i < c.collection.length; i++) {
   thisBook = c.collection[i];
   c.displayBook(thisBook);
 }
 
-var form = document.forms[0];
 form.addEventListener('submit', function (event) {
   event.preventDefault();
   var book = {
@@ -70,4 +102,6 @@ form.addEventListener('submit', function (event) {
   c.collection.push(book);
   window.localStorage.setItem('collection', JSON.stringify(c.collection));
   c.displayBook(book);
+  document.getElementById('title').value = '';
+  document.getElementById('author').value = '';
 });
