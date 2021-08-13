@@ -9,17 +9,20 @@
     <title>Document</title>
 </head>
 <body class="container-fluid w-100 d-flex flex-column align-items-center">
-  <nav class="navbar">
-    <a class="nav-link" href="#" id="add">Add new</a>
-    <a class="nav-link" href="#" id="list">List</a>
-    <a class="nav-link" href="#" id="contact">Contact</a>
+  <nav class="navbar container-fluid d-flex justify-content-between">
+    <a class="link-unstyled" href="#"><img alt="logo" src="./Captura.PNG"></a>
+    <div class=" d-flex  justify-content-around">
+      <a class="nav-link" href="#" id="add">Add new</a>
+      <a class="nav-link" href="#" id="list">List</a>
+      <a class="nav-link" href="#" id="contact">Contact</a>
+    </div>
   </nav>
   <div class="container-fluid d-flex justify-content-end" id="dateTime"></div>
-  <div id="list-div" class=" container-fluid">
+  <section id="list-div" class=" container-fluid">
     <h1 class="ff-caveat text-center">All awesome books</h1>
     <div class="books ff-caveat w-75 container-fluid d-flex flex-column"></div>
-  </div>
-  <div id="add-div"  class=" container-fluid d-none">
+  </section>
+  <section id="add-div"  class=" container-fluid d-none">
     <h1 class="ff-caveat text-center">Add awesome book</h1>
     <div class="form">
       <form class="new-book container w-50 d-flex flex-column align-items-center">
@@ -34,8 +37,8 @@
         </div>
       </form>
     </div>
-  </div>
-  <div id="contact-div" class="container-fluid d-none">
+  </section>
+  <section id="contact-div" class="container-fluid d-none">
     <h1 class="ff-caveat text-center">Contact information</h1>
     <p class="text-center">Do you have any question or you want to say "Hello"?
       <br>
@@ -43,13 +46,12 @@
       <br>Our e-mail: email@mail.com <br>Our phone: 0177 223 337 6<br>our address: streetname 2341, County
     </p>
 
-  </div>
+  </section>
   <footer class="navbar fixed-bottom d-flex justify-content-center">
     <a> Corpyiright 2021. All rights reserved.</a>
     <a class="nav-link" href="#"> Terms & Conditions</a>
   </footer>
   <script src="./luxon.js"></script>
-  
   <script src="./script.js"> </script>
 </body>
 </html>
